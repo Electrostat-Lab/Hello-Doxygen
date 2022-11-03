@@ -1,2 +1,3 @@
 # Hello-World
-A repository to test github-repositories for practical purposes.
+
+This is repository represents a quick tutorial for Github-Training sessions.
