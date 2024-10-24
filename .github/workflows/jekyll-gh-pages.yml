@@ -29,7 +29,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Doxygen version
-        run: sudo apt install doxygen && doxygen -v
+        run: wget https://github.com/doxygen/doxygen/releases/download/Release_1_9_8/doxygen-1.9.8.linux.bin.tar.gz
+             tar -xvzf doxygen-1.9.8.linux.bin.tar.gz
+             sudo mv doxygen-1.9.8/bin/* /usr/local/bin/
+             doxygen --version  # Verify installation
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
