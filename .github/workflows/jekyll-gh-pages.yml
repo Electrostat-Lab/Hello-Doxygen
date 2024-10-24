@@ -33,6 +33,8 @@ jobs:
              && tar -xvzf doxygen-1.9.8.linux.bin.tar.gz
              && sudo mv doxygen-1.9.8/bin/* /usr/local/bin/
              && doxygen --version  # Verify installation
+      - name: Build docs
+        run: cd ./docs && doxygen ../Doxyfile
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
